@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#182723">
+  <meta name="description" content="Віртуальна прогулянка EcoSpace Sea на березі Київського моря.">
+  <title>EcoSpace Sea — глемпінг на Київському морі</title>
+</head>
+<body>
+  <a class="skip" href="#explore">Перейти до прогулянки</a>
+  <div class="world" aria-hidden="true" id="world">
+    <div class="fallback"><i></i></div>
+    <div class="shade"></div>
+  </div>
+  <header class="top">
+    <a class="brand" href="#shore" aria-label="EcoSpace Sea — до початку">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span>ecoSpace <small>SEA</small></span>
+    </a>
+    <nav aria-label="Локації" class="top-nav">
+      <a href="#domes">Куполи</a>
+      <a href="#restaurant">Ресторан</a>
+      <a href="#relax">Дозвілля</a>
+    </nav>
+    <div class="header-actions">
+      <button class="mode" id="lighting" type="button" aria-pressed="false"><span aria-hidden="true">☾</span><span class="mode-text">Сутінки</span></button>
+      <a class="book small-book" href="https://sea.ecospace.ua/booking">Бронювання <span aria-hidden="true">→</span></a>
+    </div>
+  </header>
+  <div class="markers" aria-label="Точки на карті">
+    <a class="marker" data-marker="domes" href="#domes"><i></i><span>Куполи</span></a>
+    <a class="marker" data-marker="restaurant" href="#restaurant"><i></i><span>Ресторан</span></a>
+    <a class="marker" data-marker="relax" href="#relax"><i></i><span>SPA</span></a>
+  </div>
+  <main id="explore">
+    <section class="chapter intro" id="shore" aria-labelledby="shore-title">
+      <div class="copy">
+        <p class="eyebrow">Толокунь · Київське море</p>
+        <h1 id="shore-title">Куполи<br>біля <em>моря.</em></h1>
+        <p class="description">Вісім куполів-стихій, приватні тераси й тиша на березі Київського водосховища.</p>
+        <a class="button" href="#domes">Прогулятися <span aria-hidden="true">↓</span></a>
+      </div>
+      <p class="render-notice" id="render-notice" hidden>Для інтерактивної сцени потрібен браузер із WebGL 2.</p>
+    </section>
+    <section class="chapter" id="domes" aria-labelledby="domes-title">
+      <div class="copy">
+        <p class="eyebrow">Проживання</p>
+        <h2 id="domes-title">Вісім <em>стихій.</em></h2>
+        <p class="description">Панорамні вікна, власна тераса й різний характер у кожного купола.</p>
+        <a class="button" href="https://sea.ecospace.ua/kypolu">Обрати купол <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+    <section class="chapter" id="restaurant" aria-labelledby="restaurant-title">
+      <div class="copy">
+        <p class="eyebrow">Купольний ресторан</p>
+        <h2 id="restaurant-title"><em>Інь-Янь.</em></h2>
+        <p class="description">Сніданки, вечері й камерні події з краєвидом на Київське море.</p>
+        <a class="button" href="https://sea.ecospace.ua/restoran">Про ресторан <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+    <section class="chapter" id="relax" aria-labelledby="relax-title">
+      <div class="copy">
+        <p class="eyebrow">Дозвілля</p>
+        <h2 id="relax-title">Час <em>на себе.</em></h2>
+        <p class="description">Сезонний відкритий басейн, дров’яна сауна й гарячий чан просто неба.</p>
+        <a class="button" href="https://sea.ecospace.ua/dozvillya">Що робити на місці <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+    <section class="chapter" id="pier" aria-labelledby="pier-title">
+      <div class="copy">
+        <p class="eyebrow">Пірс і берег</p>
+        <h2 id="pier-title">Ближче<br><em>до води.</em></h2>
+        <p class="description">Спустіться до берега, зупиніться на пірсі й подивіться, як вода зустрічається з небом.</p>
+        <a class="button" href="https://sea.ecospace.ua/booking">Обрати дати <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+  <nav class="rail" aria-label="Маршрут прогулянки">
+    <a href="#shore" aria-current="location">Берег</a>
+    <a href="#domes">Куполи</a>
+    <a href="#restaurant">Ресторан</a>
+    <a href="#relax">SPA</a>
+    <a href="#pier">Пірс</a>
+  </nav>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
