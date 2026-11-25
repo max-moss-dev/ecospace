@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="uk">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>EcoSpace Sea · Погляд із води</title>
+<style>
+:root{font-family:system-ui,sans-serif;color:#253137;background:#f6f2eb;font-synthesis:none}
+*{box-sizing:border-box}body,h1,h2,p,figure{margin:0}a{color:inherit;text-underline-offset:4px}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid #dfad70;outline-offset:5px}
+.journey{height:195vh;height:195svh;background:#152c31}.frame{height:100vh;height:100svh;position:sticky;top:0;isolation:isolate;overflow:hidden;display:grid;align-items:end;color:#fff9ee}
+.frame video,.poster,.grade{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:59% 53%}
+.poster{z-index:-3}.frame video{z-index:-2}.grade{z-index:-1;pointer-events:none;background:linear-gradient(180deg,#10191d56 0%,transparent 27%,transparent 48%,#111c20b0 100%),linear-gradient(90deg,#14202374,transparent 65%)}
+.brand{position:absolute;top:max(24px,env(safe-area-inset-top));left:clamp(22px,5vw,78px);font-size:clamp(19px,2.2vw,27px);font-weight:570;letter-spacing:-.051em}.brand small{font-size:.4em;letter-spacing:.23em;margin-left:7px}
+.hero-copy{width:min(1080px,100%);padding:0 clamp(22px,5vw,78px) clamp(72px,12vh,125px);opacity:1}
+.eyebrow{font-size:13px;text-transform:uppercase;letter-spacing:.15em;font-weight:650}.hero-copy h1{font:400 clamp(55px,8.8vw,128px)/.94 Georgia,serif;letter-spacing:-.062em;max-width:13ch;margin:14px 0 19px;text-wrap:balance}
+.hero-copy p:last-child{font-size:17px;line-height:1.55;max-width:40ch}.hint{position:absolute;bottom:29px;left:clamp(22px,5vw,78px);font-size:13px;color:#fff6e5}
+.status{position:absolute;bottom:32px;right:clamp(22px,5vw,78px);font-size:13px;color:#fff6e5}.scrub{appearance:none;position:absolute;bottom:13px;left:0;width:100%;height:7px;margin:0;opacity:.86;cursor:ew-resize;accent-color:#f2c092;display:none}.running .scrub{display:block}.status[hidden]{display:none}
+.edit{padding:clamp(70px,11vw,148px) clamp(22px,8vw,126px);max-width:1500px;margin:auto}
+.edit h2,.notes h2{font:400 clamp(42px,6vw,80px)/.97 Georgia,serif;letter-spacing:-.052em;text-wrap:balance;margin:12px 0 26px}
+.edit p{max-width:46ch;font-size:17px;line-height:1.65}.edit .eyebrow{color:#64625b}
+.media{display:grid;grid-template-columns:1fr 1.35fr;gap:clamp(12px,3vw,45px);align-items:center;margin-top:35px}.media img{width:100%;display:block;object-fit:cover}.media img:first-child{aspect-ratio:4/5;object-position:center 64%}.media img:last-child{aspect-ratio:1.56}
+.action{display:inline-block;margin-top:24px;font-weight:630}
+.review{border-top:1px solid #c7bfb2;padding:30px 0 58px}.review h2{font-size:clamp(28px,4.2vw,55px)}.review blockquote{margin:0 0 10px;font:400 clamp(24px,3.2vw,40px)/1.19 Georgia,serif;color:#253137;max-width:27ch}.review small{font-size:14px}.notes{max-width:1500px;margin:auto;padding:0 clamp(22px,8vw,126px) clamp(55px,9vw,111px);color:#515b5d}
+@media(max-width:680px){.journey{height:175svh}.frame video,.poster{object-position:63% 50%}.hero-copy p:last-child{font-size:16px}.media{grid-template-columns:1fr 1fr}.media img:last-child{aspect-ratio:4/5;object-position:53% center}.hint{bottom:30px}}
+@media(prefers-reduced-motion:reduce){.journey{height:auto}.frame{position:relative;height:84svh}.hint{display:none}}
+.no-scrub .journey{height:auto}.no-scrub .frame{position:relative;height:86svh}.no-scrub .hint{display:none}.no-scrub video{visibility:hidden}
+</style>
+<body>
+<section class="journey" aria-labelledby="hero-title">
+ <div class="frame">
+  <img class="poster" src="https://res2.weblium.site/res/66f405897fbc939673fae382/66f413e8d0747afe11c448e0_optimized_1521" alt="">
+  <video id="flight" src="https://d2ol7oe51mr4n9.cloudfront.net/user_38MfwUl5kwsRKm8tCCwHKkeHZOi/7236eee2-60f7-4804-8ae6-201a24bd1626.mp4" poster="https://res2.weblium.site/res/66f405897fbc939673fae382/66f413e8d0747afe11c448e0_optimized_1521" muted playsinline preload="auto" aria-label="Камерний проліт уздовж берега EcoSpace Sea"></video>
+  <div class="grade" aria-hidden="true"></div>
+  <p class="brand">ecoSpace <small>SEA</small></p>
+  <div class="hero-copy">
+   <p class="eyebrow">Толокунь · Київське море</p>
+   <h1 id="hero-title">Залишіться біля води до ранку.</h1>
+   <p>Куполи й тераси на березі Київського моря.</p>
+  </div>
+  <p class="hint">Прокрутіть, щоб наблизитися до берега</p>
+  <p class="status" id="scene-status" hidden>Показано аерофото</p>
+  <input class="scrub" id="scrub" type="range" aria-label="Положення камери" min="0" max="1000" value="0">
+ </div>
+</section>
+<main>
+ <section class="edit" aria-labelledby="events">
+  <p class="eyebrow">Корпоративи і події</p>
+  <h2 id="events">Весілля на березі</h2>
+  <p>Після загального плану — церемонія біля води й живі кадри свята з галереї EcoSpace.</p>
+  <div class="media">
+   <img loading="lazy" src="https://res2.weblium.site/res/66fab76c02b3d2c5f9156ad9/68f75abf9cb204cb2f60afba_optimized_1200" alt="Молодята під квітковою аркою біля води">
+   <img loading="lazy" src="https://res2.weblium.site/res/66fab76c02b3d2c5f9156ad9/68f75adb9cb204cb2f60b021_optimized_1389" alt="Гості EcoSpace Sea біля басейну, на тлі куполів та води">
+  </div>
+  <a class="action" href="https://sea.ecospace.ua/eventsecospace">Переглянути весільну галерею</a>
+ </section>
+ <aside class="notes" aria-labelledby="guest-title"><div class="review"><h2 id="guest-title">Що запам’яталося гостям</h2><blockquote>«Прокидатися з видом на воду, пити ранкову каву на терасі…»</blockquote><small>Богдан Сіроокий · Energy · <a href="https://hutshub.com/complexes/67e6ad20a7fda9ab5562e1a7/kompleks-ecospace-sea-glamping">Hutshub</a></small></div></aside>
+ <footer class="notes"><small>Тест переходу від згенерованого прольоту до реальних фотографій. Фото й аерофото — EcoSpace Sea.</small></footer>
+</main>
+<script>
+const video=document.querySelector('#flight');
+const journey=document.querySelector('.journey');
+const frame=document.querySelector('.frame');
+const progress=document.querySelector('#scrub');
+const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+const status=document.querySelector('#scene-status');
+let scheduled=false, target=0;
+function enable(){
+ if(reduced.matches||video.error)return;
+ document.body.classList.remove('no-scrub');
+ document.body.classList.add('running');
+ status.hidden=true;
+ queue();
+}
+function fallback(){
+ document.body.classList.remove('running');
+ document.body.classList.add('no-scrub');
+ status.hidden=false;
+}
+function seek(){
+ if(video.readyState<1||!Number.isFinite(video.duration)||video.seeking)return;
+ const time=target*Math.max(0,video.duration-.04);
+ if(Math.abs(video.currentTime-time)>.025)video.currentTime=time;
+}
+function update(){
+ scheduled=false;
+ if(!document.body.classList.contains('running'))return;
+ const height=journey.offsetHeight-frame.offsetHeight;
+ const value=height>0?Math.min(1,Math.max(0,-journey.getBoundingClientRect().top/height)):0;
+ target=value;
+ progress.value=String(Math.round(value*1000));
+ seek();
+}
+function queue(){
+ if(scheduled)return;
+ scheduled=true;
+ requestAnimationFrame(update);
+}
+video.addEventListener('loadedmetadata',enable);
+video.addEventListener('seeked',seek);
+video.addEventListener('error',fallback);
+addEventListener('scroll',queue,{passive:true});
+addEventListener('resize',queue,{passive:true});
+progress.addEventListener('input',()=>{
+ const ratio=Number(progress.value)/1000;
+ const top=scrollY+journey.getBoundingClientRect().top;
+ scrollTo({top:top+ratio*(journey.offsetHeight-frame.offsetHeight),behavior:'auto'});
+ target=ratio;
+ seek();
+});
+reduced.addEventListener('change',()=>reduced.matches?fallback():enable());
+if(reduced.matches||video.error)fallback();
+else if(video.readyState>=1)enable();
+</script>
+</body></html>
